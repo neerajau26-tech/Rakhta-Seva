@@ -1,0 +1,21 @@
+# Compiled Java files
+*.class
+out/
+
+# Build files
+target/
+build/
+*.war
+
+# IDE settings
+.vscode/
+
+# Logs
+*.log
+
+# Sensitive configuration
+config/mail.properties
+
+# OS files
+.DS_Store
+Thumbs.db

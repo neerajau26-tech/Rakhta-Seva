@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakhta Seva â€” Blood Donation &amp; Donor Registry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="shell">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="navbar-top">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 24 24">
+          <defs>
+            <linearGradient id="dropGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#E8434F"/>
+              <stop offset="100%" stop-color="#9E1B27"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 2.2C12 2.2 4.6 12.1 4.6 16.6C4.6 20.9 7.9 23.5 12 23.5C16.1 23.5 19.4 20.9 19.4 16.6C19.4 12.1 12 2.2 12 2.2Z" fill="url(#dropGrad)"/>
+          <path d="M8.6 15.4C8.4 17.3 9.6 18.7 11.3 19.1" stroke="rgba(255,255,255,0.65)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+        </svg>
+        <div>
+          <div class="brand-name">Rakhta <span class="brand-accent">Seva</span></div>
+          <div class="brand-sub">Donor Registry &amp; Blood Bank</div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-bottom">
+      <nav class="nav" id="nav">
+        <button data-target="home" class="active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+          Overview
+        </button>
+        <button data-target="register">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+          Become a donor
+        </button>
+        <button data-target="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.5-4.5"/></svg>
+          Find donors
+        </button>
+        <button data-target="bank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10l9-6 9 6"/><path d="M4 10v9M9 10v9M15 10v9M20 10v9"/><path d="M2 21h20"/></svg>
+          Blood bank
+        </button>
+        <button data-target="camps">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
+          Camps
+        </button>
+        <button data-target="alerts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 3a7 7 0 017 7c0 4 1.5 5.5 1.5 5.5H3.5S5 17 5 13a7 7 0 017-7z"/><path d="M9.5 19a2.5 2.5 0 005 0"/></svg>
+          Emergency alert
+        </button>
+        <button data-target="rewards">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 4h10l-1 6.5a4 4 0 01-8 0L7 4z"/><path d="M10 15.5h4V19h-4z"/><path d="M8 19h8"/></svg>
+          Rewards
+        </button>
+        <button data-target="admin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+          Admin
+        </button>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+
+    <!-- ---------- HOME ---------- -->
+    <section id="home" class="active">
+      <div class="eyebrow">Community blood registry</div>
+      <h1 class="hero-title">
+        <svg class="hero-drop" viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="heroDropGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#E8434F"/>
+              <stop offset="100%" stop-color="#9E1B27"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 2.2C12 2.2 4.6 12.1 4.6 16.6C4.6 20.9 7.9 23.5 12 23.5C16.1 23.5 19.4 20.9 19.4 16.6C19.4 12.1 12 2.2 12 2.2Z" fill="url(#heroDropGrad)"/>
+          <path d="M8.6 15.4C8.4 17.3 9.6 18.7 11.3 19.1" stroke="rgba(255,255,255,0.65)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+        </svg>
+        One registration finds the right donor faster than a phone tree.
+      </h1>
+      <p class="page-lede">Rakhta Seva keeps a live registry of eligible donors, tracks unit stock by blood group, and pushes an alert to matching donors the moment a request comes in.</p>
+
+      <div class="stat-strip" id="homeStats"></div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="serif" style="font-size:18px; margin-bottom:10px;">How a request moves</h3>
+          <table>
+            <tbody id="workflowTable"></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3 class="serif" style="font-size:18px; margin-bottom:10px;">Start here</h3>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <button class="btn btn-primary" data-target="register">Register as a donor</button>
+            <button class="btn btn-outline" data-target="search">Search for a donor</button>
+            <button class="btn btn-outline" data-target="alerts">Raise an emergency alert</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="rule">
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:8px;">Rarest on the registry</h3>
+          <div id="rarestBox" style="font-size:13.5px; color:var(--ink-soft);"></div>
+        </div>
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:8px;">Eligibility, in short</h3>
+          <p style="font-size:13px; color:var(--ink-soft); line-height:1.6; margin:0;">
+            Donors must be 18 years or older and at least 50&nbsp;kg. The registration form checks this automatically and explains what to do if someone falls short.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule">
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:8px;">Feedback</h3>
+          <p style="font-size:13px; color:var(--ink-soft); line-height:1.6; margin:0 0 14px;">Tell us what worked, and what didn't, at a camp or during a request.</p>
+          <form id="feedbackForm">
+            <label>Name •</label>
+            <input type="text" id="fb_name" required>
+            <label>Rating</label>
+            <select id="fb_rating">
+              <option value="5">5 â€” excellent</option>
+              <option value="4">4 â€” good</option>
+              <option value="3">3 â€” okay</option>
+              <option value="2">2 â€” needs work</option>
+              <option value="1">1 â€” poor</option>
+            </select>
+            <label>Message •</label>
+            <textarea id="fb_message" required placeholder="Share your experience..."></textarea>
+            <button type="submit" class="btn btn-primary" style="margin-top:16px;">Submit feedback</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">What people are saying</h3>
+          <div id="feedbackList" class="reg-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- REGISTER ---------- -->
+    <!-- ---------- REGISTER ---------- -->
+<section id="register">
+  <div class="eyebrow">01 registration ledger</div>
+  <h1 class="page-title">Become a donor</h1>
+  <p class="page-lede">
+    Every entry gets a registry ID, an eligibility check, and a place on the leaderboard.
+    Fields marked with a dot are required.
+  </p>
+
+  <div class="grid-2">
+
+    <div class="card">
+
+      <form id="donorForm" action="registerDonor" method="post">
+
+        <!-- Full Name -->
+        <label>Full name •</label>
+        <input
+          type="text"
+          id="f_name"
+          name="name"
+          required
+          placeholder="e.g. Anjali Menon"
+        >
+
+        <!-- Age + Weight -->
+        <div class="field-row">
+
+          <div>
+            <label>Age (years) •</label>
+            <input
+              type="number"
+              id="f_age"
+              name="age"
+              min="1"
+              max="100"
+              required
+              placeholder="e.g. 24"
+            >
+          </div>
+
+          <div>
+            <label>Weight (kg) •</label>
+            <input
+              type="number"
+              id="f_weight"
+              name="weight"
+              min="1"
+              max="250"
+              required
+              placeholder="e.g. 58"
+            >
+          </div>
+
+        </div>
+
+        <!-- Blood Group + Phone -->
+        <div class="field-row">
+
+          <div>
+            <label>Blood group •</label>
+
+            <select
+              id="f_group"
+              name="bloodGroup"
+              required
+            >
+              <option value="">Select</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+
+          </div>
+
+          <div>
+            <label>Phone •</label>
+
+            <input
+              type="tel"
+              id="f_phone"
+              name="phone"
+              required
+              placeholder="e.g. 9847012345"
+            >
+
+          </div>
+
+        </div>
+        <!-- Email -->
+        <label>Email •</label>
+        <input
+          type="email"
+          id="f_email"
+          name="email"
+          required
+          placeholder="e.g. donor@example.com"
+        >
+        <!-- Location -->
+        <label>Location (town / district) •</label>
+
+        <input
+          type="text"
+          id="f_location"
+          name="location"
+          required
+          placeholder="e.g. Nadathanam, Kottayam"
+        >
+
+        <!-- Last Donation -->
+        <label>Last donation date (optional)</label>
+
+        <input
+          type="date"
+          id="f_lastdonation"
+          name="lastDonation"
+        >
+
+        <!-- Medical Notes -->
+        <label>
+          Medical notes (optional) â€” conditions, medication, last checkup
+        </label>
+
+        <textarea
+          id="f_health"
+          name="medicalNotes"
+          placeholder="e.g. Hemoglobin 13.8 g/dL, checked June 2026. No chronic conditions."
+        ></textarea>
+
+        <!-- Submit -->
+        <div style="margin-top:20px; display:flex; gap:10px;">
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Check eligibility &amp; register
+          </button>
+
+        </div>
+
+        <div class="msg" id="regMsg"></div>
+
+      </form>
+
+    </div>
+
+
+    <!-- WHY WE ASK THIS -->
+    <div class="card">
+
+      <h3
+        class="serif"
+        style="font-size:16px; margin-bottom:10px;"
+      >
+        Why we ask this
+      </h3>
+
+      <table>
+
+        <tr>
+          <td style="width:40%; color:var(--ink-soft);">
+            Age &amp; weight
+          </td>
+          <td>
+            Confirms the donor meets the minimum 18-years / 50-kg
+            threshold before anyone travels to a camp.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="color:var(--ink-soft);">
+            Blood group
+          </td>
+          <td>
+            Matches supply against real hospital requests instantly.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="color:var(--ink-soft);">
+            Location
+          </td>
+          <td>
+            Lets us notify donors closest to the camp or emergency first.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="color:var(--ink-soft);">
+            Medical notes
+          </td>
+          <td>
+            A quick reference for camp staff â€” not a substitute for
+            a screening on the day.
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- ---------- SEARCH ---------- -->
+    <section id="search">
+      <div class="eyebrow">02 live directory</div>
+      <h1 class="page-title">Find donors</h1>
+      <p class="page-lede">Filter the registry by blood group and location. Requesting contact opens a connection between you and the donor.</p>
+
+      <div class="card" style="margin-bottom:20px;">
+        <div class="field-row">
+          <div>
+            <label>Blood group</label>
+            <select id="s_group">
+              <option value="">Any group</option>
+              <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+            </select>
+          </div>
+          <div>
+            <label>Location contains</label>
+            <input type="text" id="s_location" placeholder="e.g. Kottayam">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="searchResults" class="reg-list"></div>
+      </div>
+    </section>
+
+    <!-- ---------- BLOOD BANK ---------- -->
+    <section id="bank">
+      <div class="eyebrow">03 inventory</div>
+      <h1 class="page-title">Blood bank inventory</h1>
+      <p class="page-lede">Unit counts by group, updated as camps close and requests are fulfilled. Admin can adjust stock from the panel below.</p>
+
+      <div class="card">
+        <table>
+          <thead><tr><th>Group</th><th>Units on hand</th><th style="width:30%">Level</th><th>Status</th><th>Registered donors</th></tr></thead>
+          <tbody id="bankTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- CAMPS ---------- -->
+    <section id="camps">
+      <div class="eyebrow">04 camp scheduling</div>
+      <h1 class="page-title">Donation camps</h1>
+      <p class="page-lede">Schedule a camp and let registered donors pledge to attend.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">Upcoming camps</h3>
+          <div id="campList" class="reg-list"></div>
+        </div>
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">Schedule a camp</h3>
+          <form id="campForm">
+            <label>Camp name •</label>
+            <input type="text" id="c_name" required placeholder="e.g. College Union Blood Camp">
+            <label>Location •</label>
+            <input type="text" id="c_location" required placeholder="e.g. Nadathanam Community Hall">
+            <label>Date •</label>
+            <input type="date" id="c_date" required>
+            <label>Organiser</label>
+            <input type="text" id="c_org" placeholder="e.g. Red Ribbon Club">
+            <button type="submit" class="btn btn-primary" style="margin-top:16px;">Add camp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- ALERTS ---------- -->
+    <section id="alerts">
+      <div class="eyebrow">05 emergency notifications</div>
+      <h1 class="page-title">Raise an emergency alert</h1>
+      <p class="page-lede">Enter what's needed. The system matches eligible donors of that blood group â€” nearby donors are matched first â€” and marks them notified.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <form id="alertForm">
+            <label>Blood group needed •</label>
+            <select id="a_group" required>
+              <option value="">Select</option>
+              <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+            </select>
+            <label>Hospital / location •</label>
+            <input type="text" id="a_location" required placeholder="e.g. Government Medical College, Kottayam">
+            <label>Units needed</label>
+            <input type="number" id="a_units" min="1" value="1">
+            <button type="submit" class="btn btn-primary" style="margin-top:16px;">Send alert</button>
+            <div class="msg" id="alertMsg"></div>
+          </form>
+        </div>
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">Alert log</h3>
+          <div id="alertLog" class="reg-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- REWARDS ---------- -->
+    <section id="rewards">
+      <div class="eyebrow">06 recognition</div>
+      <h1 class="page-title">Donor rewards</h1>
+      <p class="page-lede">Ranked by pledges on this registry. Tiers unlock small, real incentives â€” badges are cosmetic, the perks aren't.</p>
+
+      <div class="card" style="margin-bottom:20px;">
+        <table>
+          <tr><td style="width:22%; font-weight:600;">Bronze Â· 1â€“2</td><td style="color:var(--ink-soft);">Certificate of appreciation</td></tr>
+          <tr><td style="font-weight:600;">Silver Â· 3â€“5</td><td style="color:var(--ink-soft);">Priority slot booking at future camps</td></tr>
+          <tr><td style="font-weight:600;">Gold Â· 6â€“9</td><td style="color:var(--ink-soft);">Free annual health checkup voucher</td></tr>
+          <tr><td style="font-weight:600;">Platinum Â· 10+</td><td style="color:var(--ink-soft);">Featured as a registry ambassador</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3 class="serif" style="font-size:16px; margin-bottom:10px;">Leaderboard</h3>
+        <div id="leaderboard" class="reg-list"></div>
+      </div>
+    </section>
+
+    <!-- ---------- ADMIN ---------- -->
+    <section id="admin">
+      <div class="eyebrow">07 restricted</div>
+      <h1 class="page-title">Admin dashboard</h1>
+      <p class="page-lede">Demo access only â€” passcode <span class="mono">admin123</span>. Manage stock, remove entries, review reports.</p>
+
+      <div id="adminLocked" class="card" style="max-width:360px;">
+        <label>Passcode</label>
+        <input type="password" id="adminPass" placeholder="••••••••">
+        <button class="btn btn-primary" id="adminUnlock" style="margin-top:14px;">Unlock</button>
+        <div class="msg" id="adminMsg"></div>
+      </div>
+
+      <div id="adminPanel" style="display:none;">
+        <div class="stat-strip" id="adminStats"></div>
+
+        <div class="card" style="margin-bottom:20px;">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">Adjust inventory</h3>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;">
+            <div>
+              <label>Group</label>
+              <select id="inv_group">
+                <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+              </select>
+            </div>
+            <div>
+              <label>Units</label>
+              <input type="number" id="inv_units" value="1" min="1" style="width:100px;">
+            </div>
+            <button class="btn btn-outline btn-sm" id="inv_add">Add units</button>
+            <button class="btn btn-outline btn-sm" id="inv_remove">Remove units</button>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px;">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">All registered donors</h3>
+          <div id="adminDonorList" class="reg-list"></div>
+        </div>
+
+        <div class="card">
+          <h3 class="serif" style="font-size:16px; margin-bottom:10px;">All feedback</h3>
+          <div id="adminFeedbackList" class="reg-list"></div>
+        </div>
+        <!-- Emergency Alerts -->
+<div class="card" style="margin-bottom:20px;">
+
+  <h3 class="serif" style="font-size:16px; margin-bottom:10px;">
+    Emergency alerts
+  </h3>
+
+  <div id="adminAlertList" class="reg-list">
+    <div class="muted">
+      No emergency alerts yet.
+    </div>
+  </div>
+
+</div>
+      </div>
+    </section>
+
+    
+
+    <footer class="pagefoot">
+      Rakhta Seva â€” a demonstration registry built to model Donor, BloodBank, Camp, EmergencyAlert and Feedback as cooperating classes. Data entered here is shared with everyone using this page.
+      <div class="pagefoot-tag">OOP mini project â€” Donor Â· BloodBank Â· Camp Â· Alert</div>
+    </footer>
+  </main>
+</div>
+
+<!-- Eligibility Popup -->
+<div id="eligibilityModal" class="modal-overlay" aria-hidden="true">
+
+  <div class="eligibility-modal">
+
+    <button
+      type="button"
+      class="modal-close"
+      onclick="closeEligibilityModal()"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+
+    <div class="modal-icon">âš ï¸</div>
+
+    <h2>Registration Cannot Be Completed</h2>
+
+    <p id="eligibilityMessage">
+      You are currently not eligible to donate blood.
+    </p>
+
+    <div class="eligibility-rule">
+      <span>âœ“</span>
+      Age must be at least 18 years
+    </div>
+
+    <div class="eligibility-rule">
+      <span>âœ“</span>
+      Weight must be at least 50 kg
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary modal-ok"
+      onclick="closeEligibilityModal()"
+    >
+      Okay
+    </button>
+
+  </div>
+
+</div>
+
+<!-- Load JavaScript only once -->
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
+
